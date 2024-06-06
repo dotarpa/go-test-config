@@ -1,0 +1,17 @@
+global:
+  label_limit: 30
+  label_name_length_limit: 200
+  label_value_length_limit: 200
+
+  external_labels:
+    monitor: codelab
+    foo: bar
+
+alerting:
+  alertmanager:
+    scheme: https
+    static_configs:
+      - targets:
+          - "1.2.3.4:9093"
+          - "1.2.3.5:9093"
+          - "1.2.3.6:9093"
